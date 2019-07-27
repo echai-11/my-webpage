@@ -1,0 +1,363 @@
+/*CSS VARIABLES*/
+:root {
+  --header-white: #f5f6fa;
+  --background-grey: #dcdde1; }
+
+/*FLEXBOX*/
+/*MAIN-PAGE*/
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif; }
+
+/*SCROLLING*/
+div:focus, nav:focus {
+  outline: none; }
+
+/*HEADER*/
+header {
+  height: calc(100vh - 70px);
+  width: 100%;
+  background: url("../img/intro_bg_fixed.jpg");
+  background-size: cover; }
+  header::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    min-height: calc(100vh - 70px);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.05) 100%);
+    z-index: 1; }
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .header-container h1 {
+    font-size: 80px;
+    color: var(--header-white);
+    text-shadow: 2px 2px 2px 255, 255, 255, 0.3; }
+    .header-container h1::after {
+      content: "";
+      display: block;
+      width: 80px;
+      position: relative;
+      left: 156px;
+      top: 10px;
+      height: 1px;
+      background: var(--header-white); }
+  .header-container h3 {
+    font-size: 30px;
+    color: var(--header-white);
+    margin-top: -20px; }
+
+#header-link {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  width: 140px;
+  color: black;
+  background: rgba(255, 255, 255, 0.3);
+  margin-top: 10px;
+  text-decoration: none; }
+  #header-link:hover {
+    background: #dcdde1; }
+
+/*NAVIGATION*/
+nav {
+  height: 70px;
+  background: var(--header-white);
+  z-index: 9999;
+  box-shadow: 0 4px 2px -2px rgba(169, 169, 169, 0.5); }
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 70px;
+  width: 100%;
+  box-shadow: 1px 1px 5px 1px rgba(169, 169, 169, 0.5); }
+
+.nav-container {
+  height: inherit;
+  margin: 0 auto;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around; }
+  .nav-container div {
+    display: inline-block;
+    text-align: center;
+    width: 30%; }
+    .nav-container div a {
+      text-decoration: none;
+      text-transform: lowercase;
+      color: black; }
+      .nav-container div a:hover {
+        font-weight: bold;
+        font-size: 17px; }
+
+/*MAIN-SECTIONS*/
+.about-container, .portfolio-container, .contact-container {
+  width: 45%;
+  height: inherit;
+  margin: 0 auto;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.about-container h3, .portfolio-container h3, .contact-container h3 {
+  font-size: 2em;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 50px; }
+
+/*ABOUT SECTION*/
+#about {
+  background: var(--background-grey);
+  height: auto; }
+  #about h3 {
+    margin-top: 100px; }
+  #about p {
+    line-height: 22px;
+    font-size: 15px;
+    padding: 5px;
+    word-spacing: 2px;
+    word-break: break-word; }
+    #about p:first-child {
+      margin-top: 60px; }
+  #about li {
+    margin: 22px;
+    line-height: 22px;
+    word-spacing: 2px; }
+    #about li span {
+      padding-right: 3px;
+      font-weight: bold;
+      word-spacing: 2px; }
+
+.profile-pic {
+  margin: 0 auto;
+  background: url("../img/profile_pic.jpg");
+  width: 180px;
+  height: 180px;
+  border-radius: 200px;
+  background-size: 400px;
+  background-position: -153px -40px;
+  border: 1px solid gold; }
+
+/*PORTFOLIO SECTION*/
+#portfolio {
+  min-height: 100vh; }
+  #portfolio p {
+    text-align: center;
+    margin-bottom: 25px; }
+  #portfolio a {
+    color: black; }
+  #portfolio a[href="#below"]:hover {
+    font-weight: bold;
+    text-decoration: underline; }
+  #portfolio img[src*="linkedIn"] {
+    width: 80px;
+    height: 20px;
+    display: inline-block;
+    margin-bottom: -4px; }
+  #portfolio img[src*="linkedIn"]:hover {
+    cursor: alias; }
+  #portfolio img[src*="facebook"] {
+    width: 80px;
+    height: 15px;
+    display: inline-block;
+    margin-left: -2px;
+    margin-right: -2px; }
+  #portfolio img[src*="facebook"]:hover {
+    cursor: alias; }
+
+.portfolio-text {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; }
+
+.portfolio-block {
+  width: 220px;
+  height: 250px;
+  text-align: center; }
+  .portfolio-block:first-child img {
+    width: 210px;
+    margin-top: 5px; }
+  .portfolio-block:last-child img {
+    width: 200px;
+    margin-top: 10px;
+    margin-bottom: 5px; }
+  .portfolio-block img {
+    z-index: 2; }
+    .portfolio-block img:hover {
+      animation: rotating-img 3s; }
+  .portfolio-block a:last-child {
+    color: black; }
+    .portfolio-block a:last-child:hover {
+      font-weight: bold;
+      text-decoration: underline; }
+
+@keyframes rotating-img {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
+
+.portfolio-resume {
+  margin-top: 50px; }
+  .portfolio-resume p {
+    text-align: center;
+    line-height: 22px;
+    margin-bottom: unset; }
+  .portfolio-resume a[href*="contact"]:hover {
+    font-weight: bold; }
+
+#download_resume:hover::after {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../img/download.png");
+  background-size: cover;
+  position: relative;
+  left: 2px;
+  bottom: -2px;
+  margin-right: 1px; }
+
+/*CONTACT SECTION*/
+#contact {
+  background: var(--background-grey);
+  height: calc(100vh - 50px); }
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px; }
+  form .row {
+    margin-bottom: 15px; }
+    form .row:first-child {
+      display: flex;
+      justify-content: space-between; }
+    form .row:last-child {
+      text-align: center; }
+  form .sub-row {
+    width: 45%; }
+    form .sub-row:last-child {
+      align-items: right; }
+  form label {
+    display: block;
+    font-size: 15px;
+    margin-right: 3px; }
+  form input {
+    border: 1px solid #718093;
+    padding: 5px;
+    width: 100%;
+    margin-top: 5px;
+    outline: none; }
+
+#contact p, form p {
+  font-size: 15px;
+  text-align: center; }
+
+form input, textarea {
+  font-size: 15px; }
+
+textarea {
+  resize: none;
+  border: 1px solid  #718093;
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+  padding: 5px;
+  font-family: 'Montserrat', sans-serif;
+  outline: none; }
+
+input[type=submit] {
+  background: rgba(113, 128, 147, 0.4);
+  height: 30px;
+  width: 150px;
+  text-transform: lowercase; }
+
+input[type=submit]:hover {
+  background: #718093; }
+
+/*FOOTER SECTION*/
+footer {
+  height: 50px;
+  padding: 15px;
+  text-align: center; }
+  footer span {
+    margin-right: 10px; }
+
+/*MEDIA QUERIES*/
+@media (min-width: 320px) and (max-width: 575px) {
+  header {
+    background-position: -200px; }
+  .header-container h1 {
+    font-size: 60px; }
+    .header-container h1::after {
+      left: 112px; }
+  .header-container h3 {
+    font-size: 25px; }
+  .about-container, .portfolio-container, .contact-container {
+    width: 70%; }
+  .portfolio-block {
+    width: 170px;
+    height: 210px; }
+    .portfolio-block:first-child img {
+      width: 150px; }
+    .portfolio-block:last-child img {
+      width: 150px;
+      margin-top: unset; }
+  .portfolio-text {
+    flex-direction: column; }
+  .portfolio-resume {
+    margin-top: 35px; }
+  form .row:first-child {
+    flex-direction: column; }
+  form .sub-row {
+    width: 100%; }
+  form .sub-row:first-child {
+    margin-bottom: 10px; } }
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  #about {
+    min-height: 100vh; }
+  #portfolio {
+    min-height: auto; }
+  #contact {
+    height: auto;
+    min-height: auto; } }
+
+@media (max-width: 767.98px) {
+  #about {
+    min-height: 100vh; }
+  #portfolio {
+    min-height: auto; }
+  #contact {
+    height: auto;
+    min-height: auto; } }
