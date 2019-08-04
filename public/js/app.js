@@ -1,3 +1,7 @@
+
+$(window).on('load', function(){
+    $('.loading-container').fadeOut(1000);
+})
 jQuery(function($) {
 
     var $nav = $('nav');
