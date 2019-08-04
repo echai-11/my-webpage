@@ -42,6 +42,8 @@ div:focus, nav:focus {
 /*HEADER*/
 header {
   height: calc(100vh - 70px);
+  height: -webkit-calc(100vh - 70px);
+  height: -moz-calc(100vh - 70px);
   width: 100%;
   background: url("../img/intro_bg_fixed.jpg");
   background-size: cover; }

@@ -2,23 +2,6 @@
 $(window).on('load', function(){
     $('.loading-container').fadeOut(1000);
 })
-jQuery(function($) {
-
-    var $nav = $('nav');
-    var $win = $(window);
-    var winH = $win.height();   // Get the window height.
-
-    $win.on("scroll", function () {
-        if ($(this).scrollTop() > winH - 70 ) {
-            $nav.addClass("fixed");
-        } else {
-            $nav.removeClass("fixed");
-        }
-    }).on("resize", function(){ // If the user resizes the window
-       winH = $(this).height(); // you'll need the new height value
-    });
-
-});
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
@@ -40,7 +23,7 @@ $('a[href*="#"]')
         event.preventDefault();
         $('html, body').animate({
           scrollTop: target.offset().top
-        }, 1000, function() {
+        }, 1100, function() {
           // Callback after animation
           // Must change focus!
           var $target = $(target);
@@ -55,3 +38,22 @@ $('a[href*="#"]')
       }
     }
   });
+$(function($) {
+
+    var $nav = $('nav');
+    var $win = $(window);
+    var winH = $win.height();   // Get the window height.
+
+    $win.on("scroll", function () {
+        if ($(this).scrollTop() > winH - 70 ) {
+            $nav.addClass("fixed");
+            $nav.css("height","55px");
+        } else {
+            $nav.removeClass("fixed");
+            $nav.css("height","70px");
+        }
+    }).on("resize", function(){ // If the user resizes the window
+       winH = $(this).height(); // you'll need the new height value
+    });
+
+});
