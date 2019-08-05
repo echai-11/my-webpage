@@ -352,7 +352,8 @@ footer {
 /*MEDIA QUERIES*/
 @media (min-width: 320px) and (max-width: 575px) {
   .header-container {
-    background-position: -200px; }
+    background-position: -200px;
+    height: 100vh; }
     .header-container h1 {
       font-size: 60px; }
       .header-container h1::after {

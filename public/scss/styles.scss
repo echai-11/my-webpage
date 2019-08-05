@@ -429,6 +429,7 @@ footer{
 @media (min-width: 320px) and (max-width:575px){
 	.header-container{
 		background-position: -200px;
+		height:100vh;
 		h1{
 			font-size: 60px;
 			&::after{
