@@ -4,6 +4,17 @@
   --background-grey: #dcdde1; }
 
 /*FLEXBOX*/
+/*HTML*/
+html {
+  overflow: scroll;
+  overflow-x: hidden; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */ }
+
 /*SPINNER*/
 .loading-container {
   margin: 0 auto;
@@ -42,6 +53,7 @@ div:focus, nav:focus {
 /*HEADER*/
 header {
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   width: 100%; }
   header::after {
     position: absolute;
@@ -339,14 +351,14 @@ footer {
 
 /*MEDIA QUERIES*/
 @media (min-width: 320px) and (max-width: 575px) {
-  header {
+  .header-container {
     background-position: -200px; }
-  .header-container h1 {
-    font-size: 60px; }
-    .header-container h1::after {
-      left: 112px; }
-  .header-container h3 {
-    font-size: 25px; }
+    .header-container h1 {
+      font-size: 60px; }
+      .header-container h1::after {
+        left: 112px; }
+    .header-container h3 {
+      font-size: 25px; }
   .about-container, .portfolio-container, .contact-container {
     width: 70%; }
   .portfolio-block {

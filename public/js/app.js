@@ -1,7 +1,14 @@
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 $(window).on('load', function(){
     $('.loading-container').fadeOut(1000);
 })
+
+window.addEventListener('resize', () => {
+  let vh = window.innerHeight * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
 // Select all links with hashes
 $('a[href*="#"]')
   // Remove links that don't actually link to anything
